@@ -1,0 +1,7 @@
+print('='*40)
+print('Digite seu nome abaixo. ')
+nome = str(input('Seu nome: ')).strip()
+print('='*40)
+nomes = nome.split()
+print('Seu primeiro nome é {}'.format(nomes[0]))
+print('Seu último nome é {}'.format(nomes[len(nomes)-1]))

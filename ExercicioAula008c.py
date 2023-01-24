@@ -1,0 +1,20 @@
+from random import randint
+print('='*30)
+print(''*30)
+print('O limite dessa avenida é de 80Km/h, fique ciente de que a cada Km acima do')
+print('limite de velocidade você será multado em R$7,00, sobre o valor fixo de R$50,00')
+print(''*30)
+print('='*30)
+nome = str(input('Digite o nome do meliante: ')).strip()
+vel = randint(65, 100)
+if vel < 80:
+    print('='*30)
+    print('{} estava dirigindo em uma velocidade de {}Km/h, considerada segura, portanto não será multado'.format(nome, vel))
+    print('Parabéns!')
+    print('=' * 30)
+else:
+    print('=' * 30)
+    multa = float(((vel - 80) * 7) + 50)
+    print('{} estava drigindo em uma velocidade de {}Km/h, nem um pouco segura, portanto será multado!'.format(nome, vel))
+    print('A multa a ser paga é de R${:.2f}, e a data limite é 15/11/2021'.format(multa))
+    print('=' * 30)

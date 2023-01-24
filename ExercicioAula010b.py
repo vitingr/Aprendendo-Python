@@ -1,0 +1,35 @@
+from time import sleep
+print('='*30)
+print(''*30)
+print('\033[1;36mBem-Vindo ao Banco Santo André\033[m')
+print(''*30)
+print('Somos um banco com objetivo de proporcionar o máximo de qualidade a atenção para nossos clientes.')
+print('Você fez uma boa escolha! nós faremos o possível para você conseguir realizar seus objetivos.')
+print('Abaixo, siga os passos para que você consiga o seu empréstimo bancário')
+print(''*30)
+print('='*30)
+print(''*30)
+sleep(5)
+print('\033[1:32mEmpréstimo Bancário para compra de Residência\033[m')
+print('Por favor, responda as perguntas abaixo para que possamos realizar o processo.')
+print(''*30)
+casa = float(input('Qual o valor da residência que você deseja? '))
+sal = float(input('Qual seu salário? R$'))
+ano = int(input('Em quantos anos você deseja parcelar? '))
+print(''*30)
+print('Processando...')
+sal1 = (sal * 30) / 100
+ano1 = ano * 12
+casa1 = casa / ano1
+if casa1 <= sal1:
+    sleep(3)
+    print('' * 30)
+    print('\033[32mObrigado seu empréstimo foi aprovado\033[m')
+    print('Você terá que pagar {} parcelas de R${:.2f}'.format(ano1, casa1))
+    print('=' * 30)
+else:
+    sleep(3)
+    print('' * 30)
+    print('\033[31mQue pena, seu empréstimo não foi aprovado\033[m')
+    print('Se quiser tentar novamente, volte mais tarde')
+    print('=' * 30)
